@@ -72,4 +72,6 @@
         <item>Quais os tipos de gastos mais comuns?</item>
     </string-array>
 
+    <string name="account_type">com.example.joaopedro.minhasfinancas</string>
+
 </resources>

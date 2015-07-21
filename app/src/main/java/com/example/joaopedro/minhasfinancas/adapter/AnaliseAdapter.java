@@ -79,7 +79,7 @@ public class AnaliseAdapter extends BaseAdapter {
                 shape.setColor(ctx.getResources().getColor(R.color.colorPrimary));
                 break;
             case 4:
-                tipo.setText("Valor destinado à lazer");
+                tipo.setText("Valor destinado ao lazer");
                 ll.setVisibility(View.VISIBLE);
                 shape.setColor(ctx.getResources().getColor(R.color.amber));
                 break;

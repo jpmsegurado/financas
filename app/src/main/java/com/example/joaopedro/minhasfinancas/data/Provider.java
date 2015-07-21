@@ -18,7 +18,7 @@ public class Provider extends ContentProvider {
 
 
 
-    public static final String PROVIDER_NAME = "br.com.joaopedrosegurado.financa";
+    public static final String PROVIDER_NAME = Contract.account_type;
     public static final String URL = "content://"+PROVIDER_NAME+"/";
     public static final Uri CONTENT_URL = Uri.parse(URL);
 

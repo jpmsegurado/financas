@@ -138,7 +138,7 @@ public class MainFragment extends Fragment implements LoaderManager.LoaderCallba
         Calendar cal = Calendar.getInstance();
         int mes = cal.get(Calendar.MONTH);
         title.setText("Resumo - "+meses[mes]);
-        title2.setText("Relatórios - "+meses[mes]);
+        title2.setText("Orientações - "+meses[mes]);
 
         return view;
 
