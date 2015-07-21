@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.joaopedro.minhasfinancas.fragment.ListBasicFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/sucesso_light">
+
+
+
+
+        <ImageButton
+            android:layout_marginLeft="30dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/arrow_sucesso"
+            android:id="@+id/anterior"
+            android:src="@drawable/ic_keyboard_arrow_left_white_48dp"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:layout_margin="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:text="Receitas fixas"
+            android:id="@+id/tipo"
+            />
+
+        <ImageButton
+            android:layout_marginRight="30dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/arrow_sucesso"
+            android:id="@+id/proximo"
+            android:src="@drawable/ic_keyboard_arrow_right_white_48dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+
+
+
+
+
+    </RelativeLayout>
+
+
+    <ListView
+        android:layout_marginTop="130dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="0dp"
+        android:divider="@color/gray_bg"
+        android:animateLayoutChanges="true"
+        android:id="@+id/list"
+        />
+    <TextView
+        android:layout_centerInParent="true"
+        android:text="Nenhum receita registrada"
+        android:gravity="center"
+        android:textColor="#aaa"
+        android:visibility="gone"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nenhum"/>
+
+    <com.getbase.floatingactionbutton.AddFloatingActionButton
+        android:id="@+id/fab"
+        fab:fab_size="mini"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        fab:fab_plusIconColor="#fff"
+        fab:fab_colorNormal="@color/sucesso"
+        fab:fab_colorPressed="@color/sucesso_dark"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="73dp"
+        />
+
+</RelativeLayout>

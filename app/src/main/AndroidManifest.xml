@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.joaopedro.minhasfinancas" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".PrincipalActivity"
+            android:label="@string/title_activity_principal"
+            android:theme="@style/AppTheme" >
+            <intent-filter android:label="@string/app_name" >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".data.Provider"
+            android:authorities="br.com.joaopedrosegurado.financa"
+            android:enabled="true"
+            android:exported="true" >
+        </provider>
+
+        <activity
+            android:name=".GastosActivity"
+            android:label="@string/title_activity_gastos"
+            android:theme="@style/GastosTheme" >
+        </activity>
+        <activity
+            android:name=".ReceitaActivity"
+            android:label="@string/title_activity_receita"
+            android:theme="@style/ReceitaTheme" >
+        </activity>
+        <activity
+            android:name=".AnaliseActivity"
+            android:label="@string/title_activity_analise" >
+        </activity>
+    </application>
+
+</manifest>

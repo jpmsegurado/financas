@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Minhas finanças</string>
+
+    <string name="inicio">Início</string>
+    <string name="bem_vindo">Bem vindo!</string>
+    <string name="texto_inicio">Primeira vez? Clique em iniciar</string>
+    <string name="subtexto_inicio">Juntos administraremos suas finanças, vamos?</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_principal">Minhas finanças</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="fab_list">
+        <item>Nova receita</item>
+        <item>Nova despesa</item>
+    </string-array>
+
+    <string name="nova_receita">Nova receita</string>
+    <string name="nova_despesa">Nova despesa</string>
+    <string name="title_activity_gastos">Todos as despesas</string>
+    <string name="title_activity_receita">Todas receitas</string>
+
+    <string-array name="tipos_despesas">
+        <item>Educação</item>
+        <item>Contas</item>
+        <item>Alimentação</item>
+        <item>Moradia</item>
+        <item>Vestimenta</item>
+    </string-array>
+
+    <string-array name="tipos_despesas_icon">
+        <item>ic_school_white_48dp</item>
+        <item>ic_description_white_48dp</item>
+        <item>ic_restaurant_menu_white_48dp</item>
+        <item>ic_home_white_48dp</item>
+        <item>ic_accessibility_white_48dp</item>
+    </string-array>
+
+    <string-array name="tipos_despesas_color">
+        <item>#0099CC</item>
+        <item>#00DC95</item>
+        <item>#A17917</item>
+        <item>#444444</item>
+        <item>#6C7A89</item>
+    </string-array>
+
+    <string-array name="meses">
+        <item>Janeiro</item>
+        <item>Fevereiro</item>
+        <item>Março</item>
+        <item>Abril</item>
+        <item>Maio</item>
+        <item>Junho</item>
+        <item>Julho</item>
+        <item>Agosto</item>
+        <item>Setembro</item>
+        <item>Outubro</item>
+        <item>Novembro</item>
+        <item>Dezembro</item>
+    </string-array>
+
+    <string name="title_activity_analise">Análises e Relatórios</string>
+
+    <string-array name="menu_relatorios">
+        <item>Análise mensal</item>
+        <item>Total despesa/tipo</item>
+    </string-array>
+
+    <string-array name="menu_relatorios_desc">
+        <item>Quanto guardar e quanto gastar?</item>
+        <item>Quais os tipos de gastos mais comuns?</item>
+    </string-array>
+
+</resources>

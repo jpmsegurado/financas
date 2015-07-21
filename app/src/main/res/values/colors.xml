@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="color" name="colorPrimary">#0099CC</item>
+    <item type="color" name="colorPrimaryDark">#007CA6</item>
+    <item type="color" name="sucesso">#26C281</item>
+    <item type="color" name="sucesso_light">#41DF9D</item>
+    <item type="color" name="sucesso_dark">#0D422C</item>
+    <item type="color" name="perigo">#AC3023</item>
+    <item type="color" name="perigo_dark">#5C140F</item>
+    <item type="color" name="perigo_light">#EF4F43</item>
+    <item type="color" name="atencao">#FFC107</item>
+    <item type="color" name="gray_bg">#fafafa</item>
+    <item type="color" name="gray_bg_dark">#dadada</item>
+    <item type="color" name="amber">#FFC107</item>
+    <item type="color" name="amber_dark">#DEA806</item>
+    <item type="color" name="white">#fafafa</item>
+</resources>

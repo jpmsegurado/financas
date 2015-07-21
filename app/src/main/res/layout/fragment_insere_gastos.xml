@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context="com.example.joaopedro.minhasfinancas.fragment.InsereGastosFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/desc"
+                android:layout_marginLeft="50dp"
+                android:inputType="text"
+                android:hint="Descrição" />
+
+
+
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignLeft="@+id/data"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/data"
+            android:src="@drawable/ic_event_black_36dp"
+            />
+
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+
+            android:layout_alignLeft="@+id/valor"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/valor"
+            android:src="@drawable/ic_attach_money_black_48dp"
+            />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/valor"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="50dp"
+                android:inputType="numberDecimal"
+                android:hint="Valor" />
+
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignLeft="@+id/desc"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/desc"
+            android:src="@drawable/ic_comment_black_48dp"
+            />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="50dp"
+                android:id="@+id/data"
+                android:inputType="number"
+                android:hint="Data" />
+
+    </RelativeLayout>
+
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tipo"
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id"
+        android:visibility="gone"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:id="@+id/inserir"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/botao_amber"
+        android:text="INSERIR"
+        />
+
+
+
+
+
+</LinearLayout>
