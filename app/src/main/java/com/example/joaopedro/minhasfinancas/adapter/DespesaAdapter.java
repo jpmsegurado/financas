@@ -67,7 +67,7 @@ public class DespesaAdapter extends CursorAdapter {
                 image.setImageResource(R.drawable.ic_school_white_48dp);
                 break;
             case 1:
-                image.setImageResource(R.drawable.ic_description_white_48dp);
+                image.setImageResource(R.drawable.ic_directions_bus_white_48dp);
                 break;
             case 2:
                 image.setImageResource(R.drawable.ic_restaurant_menu_white_48dp);
@@ -77,6 +77,12 @@ public class DespesaAdapter extends CursorAdapter {
                 break;
             case 4:
                 image.setImageResource(R.drawable.ic_accessibility_white_48dp);
+                break;
+            case 5:
+                image.setImageResource(R.drawable.ic_local_hospital_white_48dp);
+                break;
+            case 6:
+                image.setImageResource(R.drawable.ic_indeterminate_check_box_white_24dp);
                 break;
         }
 

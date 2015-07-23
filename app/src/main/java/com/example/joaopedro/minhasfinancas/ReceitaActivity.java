@@ -19,41 +19,31 @@ import com.example.joaopedro.minhasfinancas.fragment.ListaReceitasFragment;
 
 public class ReceitaActivity extends AppCompatActivity {
 
-    private InsereReceitaFragment insereReceitaFragment;
-    private ListaReceitasFragment listaReceitasFragment;
-    private FragmentManager fm;
+    private InsereReceitaFragment insereReceitaFragment = new InsereReceitaFragment();
+    private ListaReceitasFragment listaReceitasFragment = new ListaReceitasFragment();
+    private static final String show_insere = "showInsere";
+    private static final String show_lista = "showInsere";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_receita);
 
-        insereReceitaFragment = new InsereReceitaFragment();
-        listaReceitasFragment = new ListaReceitasFragment();
-        fm = getSupportFragmentManager();
+        if(savedInstanceState != null){
+            return;
+        }
 
 
-        FragmentTransaction ft = fm.beginTransaction();
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.add(R.id.container, listaReceitasFragment);
         ft.commit();
-
-        try {
-            String action = getIntent().getStringExtra("action");
-            if (action.equals("inserir")){
-                FragmentTransaction ftt = fm.beginTransaction();
-                ftt.replace(R.id.container,insereReceitaFragment);
-                ftt.commit();
-            }
-        }catch(NullPointerException e){
-            e.printStackTrace();
-        }
 
     }
 
     public void showInsere(final String id){
-        FragmentTransaction ftt = fm.beginTransaction();
+        FragmentTransaction ftt = getSupportFragmentManager().beginTransaction();
         ftt.setCustomAnimations(R.anim.right_back, R.anim.left_back, R.anim.left, R.anim.right);
-        ftt.addToBackStack(null);
+        ftt.addToBackStack(show_insere);
         ftt.replace(R.id.container, insereReceitaFragment);
         ftt.commit();
 
@@ -70,16 +60,21 @@ public class ReceitaActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+    }
     public void showListReceita(){
-        FragmentTransaction ftt = fm.beginTransaction();
+        FragmentTransaction ftt = getSupportFragmentManager().beginTransaction();
         ftt.setCustomAnimations(R.anim.right_back, R.anim.left_back, R.anim.left, R.anim.right);
-        ftt.addToBackStack(null);
+        ftt.addToBackStack(show_lista);
         ftt.replace(R.id.container,listaReceitasFragment);
         ftt.commit();
     }
 
     public FragmentManager getFm() {
-        return fm;
+        return getSupportFragmentManager();
     }
 
     public void showAlert(String msg,DialogInterface.OnClickListener listener){

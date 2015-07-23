@@ -23,18 +23,22 @@
 
     <string-array name="tipos_despesas">
         <item>Educação</item>
-        <item>Contas</item>
+        <item>Transporte</item>
         <item>Alimentação</item>
         <item>Moradia</item>
         <item>Vestimenta</item>
+        <item>Saúde</item>
+        <item>Outros</item>
     </string-array>
 
     <string-array name="tipos_despesas_icon">
         <item>ic_school_white_48dp</item>
-        <item>ic_description_white_48dp</item>
+        <item>ic_directions_bus_white_48dp</item>
         <item>ic_restaurant_menu_white_48dp</item>
         <item>ic_home_white_48dp</item>
         <item>ic_accessibility_white_48dp</item>
+        <item>ic_local_hospital_white_48dp</item>
+        <item>ic_indeterminate_check_box_white_24dp</item>
     </string-array>
 
     <string-array name="tipos_despesas_color">
@@ -43,6 +47,8 @@
         <item>#A17917</item>
         <item>#444444</item>
         <item>#6C7A89</item>
+        <item>#CF4C3D</item>
+        <item>#3D8246</item>
     </string-array>
 
     <string-array name="meses">

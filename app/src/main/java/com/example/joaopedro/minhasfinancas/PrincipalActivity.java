@@ -18,8 +18,7 @@ import com.example.joaopedro.minhasfinancas.fragment.MainFragment;
 
 public class PrincipalActivity extends AppCompatActivity {
 
-    private FragmentManager fm;
-    private MainFragment mainFragment;
+    private MainFragment mainFragment = new MainFragment();
     private ActionBar bar;
     private ActionBarDrawerToggle toggle;
 
@@ -28,12 +27,12 @@ public class PrincipalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
 
+        if(savedInstanceState != null){
+            return;
+        }
 
-
-        fm = getSupportFragmentManager();
-        mainFragment = new MainFragment();
         bar = getSupportActionBar();
-        FragmentTransaction ft = fm.beginTransaction();
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.add(R.id.container, mainFragment);
         ft.commit();
 
@@ -98,6 +97,6 @@ public class PrincipalActivity extends AppCompatActivity {
 
 
     public FragmentManager getFm() {
-        return fm;
+        return getSupportFragmentManager();
     }
 }

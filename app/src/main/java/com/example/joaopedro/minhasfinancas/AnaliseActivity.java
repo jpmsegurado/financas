@@ -15,21 +15,23 @@ import com.example.joaopedro.minhasfinancas.fragment.MainAnaliseFragment;
 
 public class AnaliseActivity extends AppCompatActivity {
 
-    private FragmentManager fm;
-    private DespesaGastosFragment despesaGastosFragment;
-    private AnaliseFragment analiseFragment;
-    private MainAnaliseFragment mainAnaliseFragment;
+    private DespesaGastosFragment despesaGastosFragment = new DespesaGastosFragment();
+    private AnaliseFragment analiseFragment = new AnaliseFragment();
+    private MainAnaliseFragment mainAnaliseFragment = new MainAnaliseFragment();
+    private static final String showDespesa = "showDespesa";
+    private static final String showMain = "showMain";
+    private static final String showAnalise = "showAnalise";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_analise);
 
-        despesaGastosFragment = new DespesaGastosFragment();
-        analiseFragment = new AnaliseFragment();
-        mainAnaliseFragment = new MainAnaliseFragment();
-        fm = getSupportFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
+        if(savedInstanceState != null){
+            return;
+        }
+
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.add(R.id.container, mainAnaliseFragment);
         ft.commit();
 
@@ -37,18 +39,18 @@ public class AnaliseActivity extends AppCompatActivity {
     }
 
     public void showAnalise(){
-        FragmentTransaction ft = fm.beginTransaction();
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.setCustomAnimations(R.anim.right_back, R.anim.left_back, R.anim.left, R.anim.right);
         ft.replace(R.id.container, analiseFragment);
-        ft.addToBackStack(null);
+        ft.addToBackStack(showAnalise);
         ft.commit();
     }
 
     public void showDespesaGastos(){
-        FragmentTransaction ft = fm.beginTransaction();
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.setCustomAnimations(R.anim.right_back, R.anim.left_back, R.anim.left, R.anim.right);
         ft.replace(R.id.container, despesaGastosFragment);
-        ft.addToBackStack(null);
+        ft.addToBackStack(showDespesa);
         ft.commit();
     }
 
